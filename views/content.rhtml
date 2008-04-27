@@ -1,0 +1,20 @@
+<% if sidebar.diigo -%>
+  <div id="diigo">
+    <h3><a href="<%=h sidebar.diigo.link %>"><%=h sidebar.diigo.title %></a></h3>
+    <% (groupdate ? sidebar.diigo.days : [{ :container => sidebar.diigo.items }]).each do |group| -%>
+    <% if groupdate -%>
+    <span class="date"><%=h group[:date].to_s.to_date.strftime("%b %d") %></span>
+    <% end -%>
+    <ul>
+      <% for item in group[:container] %>
+      <li>
+        <a href="<%= item.link %>" title="<%= item.description%>"><%=h item.title %></a>
+        <% if item.description -%>
+          <br /><span class="desc"><%= desclink ? item.description_link : item.description %></span>
+        <% end -%>
+      </li>
+      <% end -%>
+    </ul>
+    <% end -%>
+  </div>
+<% end -%>
