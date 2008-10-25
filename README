@@ -1,0 +1,14 @@
+Typo Diigo sidebar plugin
+
+* INSTALL
+
+Download Typo Diigo and unpack it into vendor/plugins or go to your Typo application and:
+
+./script/plugin install git://github.com/fdv/diigo_sidebar.git
+
+
+Then, go to http://yourdomain/admin/sidebar and enable Typo Diigo sidebar plugin.
+
+* REQUIREMENTS
+
+Typo Diigo sidebar needs Typo version 4.1 or greater. Typo is at http://typosphere.org or http://github.com/fdv/typo/tree
